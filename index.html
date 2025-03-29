@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens de Atendimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mensagens Padrão de Atendimento</h1>
+    </header>
+
+    <div class="container">
+        <!-- Mensagem 1 -->
+        <div class="mensagem" id="msg1">
+            <h3>Mensagem 1: Saudação Inicial</h3>
+            <p class="texto">Olá, boa tarde! Tudo bem? Me informe o nome completo ou CPF do titular.</p>
+            <button onclick="toggleMessage('msg1')">Mostrar/Esconder</button>
+        </div>
+
+        <!-- Mensagem 2 -->
+        <div class="mensagem" id="msg2">
+            <h3>Mensagem 2: Oferecimento de Ajuda</h3>
+            <p class="texto">Fora essa questão, eu te ajudo em algo mais no momento?</p>
+            <button onclick="toggleMessage('msg2')">Mostrar/Esconder</button>
+        </div>
+
+        <!-- Mensagem 3 -->
+        <div class="mensagem" id="msg3">
+            <h3>Mensagem 3: Agradecimento e Despedida</h3>
+            <p class="texto">Foi um prazer te atender, tenha uma excelente semana. 😀</p>
+            <button onclick="toggleMessage('msg3')">Mostrar/Esconder</button>
+        </div>
+
+        <!-- Mensagem 4 -->
+        <div class="mensagem" id="msg4">
+            <h3>Mensagem 4: Pergunta de Ajuda</h3>
+            <p class="texto">Em que posso ajudar no momento?</p>
+            <button onclick="toggleMessage('msg4')">Mostrar/Esconder</button>
+        </div>
+
+        <!-- Mensagem 5 -->
+        <div class="mensagem" id="msg5">
+            <h3>Mensagem 5: Finalizando Atendimento</h3>
+            <p class="texto">Caro cliente, o horário do meu expediente chegou ao fim! Portanto, eu irei finalizar o seu atendimento, mas sempre que precisar, estamos à disposição para atendê-lo. Tenha uma excelente semana! 😀</p>
+            <button onclick="toggleMessage('msg5')">Mostrar/Esconder</button>
+        </div>
+
+        <!-- Mensagem 6 -->
+        <div class="mensagem" id="msg6">
+            <h3>Mensagem 6: Solicitação de Vídeo</h3>
+            <p class="texto">Certo! Você poderia me enviar, por gentileza, um pequeno vídeo do seu roteador no momento? Assim, podemos verificar melhor o seu caso!</p>
+            <button onclick="toggleMessage('msg6')">Mostrar/Esconder</button>
+        </div>
+
+        <!-- Mensagem 7 -->
+        <div class="mensagem" id="msg7">
+            <h3>Mensagem 7: Motivo do Cancelamento</h3>
+            <p class="texto">Qual seria o motivo do cancelamento? Não gostaríamos de perder você como cliente! 😕</p>
+            <button onclick="toggleMessage('msg7')">Mostrar/Esconder</button>
+        </div>
+
+        <!-- Mensagem 8 -->
+        <div class="mensagem" id="msg8">
+            <h3>Mensagem 8: Motivo de Insatisfação</h3>
+            <p class="texto">Entendido! Gostaria de saber se o motivo do cancelamento está relacionado a alguma insatisfação com nossos serviços, para que eu possa te ajudar da melhor forma possível.</p>
+            <button onclick="toggleMessage('msg8')">Mostrar/Esconder</button>
+        </div>
+
+        <!-- Mensagem 9 -->
+        <div class="mensagem" id="msg9">
+            <h3>Mensagem 9: Transferência para Almoço</h3>
+            <p class="texto">Caro cliente, estarei saindo para meu horário de almoço, portanto, eu irei te transferir para que outro atendente dê continuidade em seu atendimento. Foi um prazer te atender. 😀</p>
+            <button onclick="toggleMessage('msg9')">Mostrar/Esconder</button>
+        </div>
+
+        <!-- Mensagem 10 -->
+        <div class="mensagem" id="msg10">
+            <h3>Mensagem 10: Indisponibilidade na Região</h3>
+            <p class="texto">Verifiquei que existe uma indisponibilidade em sua região, mas não se preocupe, a nossa equipe já está no local realizando os devidos procedimentos para que a sua conexão volte o mais rápido possível. No momento eu te ajudo em algo mais?</p>
+            <button onclick="toggleMessage('msg10')">Mostrar/Esconder</button>
+        </div>
+
+        <!-- Mensagem 11 -->
+        <div class="mensagem" id="msg11">
+            <h3>Mensagem 11: Apresentação e Atendimento</h3>
+            <p class="texto">Olá! Fico muito feliz em poder te atender 😀 Faço parte do time de relacionamento da Msol! Meu nome é xxxx e irei dar continuidade ao seu atendimento. O que posso fazer por você hoje?</p>
+            <button onclick="toggleMessage('msg11')">Mostrar/Esconder</button>
+        </div>
+
+        <!-- Mensagem 12: Paramount+ -->
+        <div class="mensagem" id="msg12">
+            <h3>Mensagem 12: Oferta Paramount+</h3>
+            <p class="texto">Paramount+ 🎬 O Paramount+ é uma plataforma de streaming que oferece filmes, séries, desenhos e conteúdos exclusivos da Paramount. Nele, você encontra produções originais, lançamentos de Hollywood e títulos de sucesso, além de canais ao vivo. O serviço está disponível para assistir pelo celular, computador e smart TVs, permitindo download de conteúdos para assistir offline em alguns planos.</p>
+            <button onclick="toggleMessage('msg12')">Mostrar/Esconder</button>
+        </div>
+
+        <!-- Mensagem 13: Deezer -->
+        <div class="mensagem" id="msg13">
+            <h3>Mensagem 13: Oferta Deezer</h3>
+            <p class="texto">Deezer 🎵 O Deezer é um serviço de streaming de música que permite ouvir milhões de músicas, criar playlists, baixar faixas para ouvir offline e acessar conteúdos exclusivos. Com planos individuais, familiares e até gratuitos com anúncios, o usuário pode curtir suas músicas favoritas em diversos dispositivos, como celular, computador e smart TVs.</p>
+            <button onclick="toggleMessage('msg13')">Mostrar/Esconder</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
