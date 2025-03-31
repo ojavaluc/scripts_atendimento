@@ -16,6 +16,7 @@
 
     <!-- Menu Lateral (Sidebar) -->
     <nav id="menu" class="sidebar">
+        <button id="closeMenu" onclick="toggleMenu()">X</button> <!-- Botão de fechar dentro do menu -->
         <ul>
             <li><a href="#msg1">Mensagem 1: Saudação Inicial</a></li>
             <li><a href="#msg2">Mensagem 2: Oferecimento de Ajuda</a></li>
@@ -38,79 +39,79 @@
         <div class="mensagem" id="msg1">
             <h3>Mensagem 1: Saudação Inicial</h3>
             <p>Olá, boa tarde! Tudo bem? Me informe o nome completo ou CPF do titular.</p>
-            <button class="copy-btn" onclick="copyMessage('msg1')">Copiar</button> <!-- Botão Copiar -->
+            <button class="copy-btn" onclick="copyMessage('msg1')">Copiar</button>
         </div>
 
         <div class="mensagem" id="msg2">
             <h3>Mensagem 2: Oferecimento de Ajuda</h3>
             <p>Fora essa questão, eu te ajudo em algo mais no momento?</p>
-            <button class="copy-btn" onclick="copyMessage('msg2')">Copiar</button> <!-- Botão Copiar -->
+            <button class="copy-btn" onclick="copyMessage('msg2')">Copiar</button>
         </div>
 
         <div class="mensagem" id="msg3">
             <h3>Mensagem 3: Agradecimento e Despedida</h3>
             <p>Foi um prazer te atender, tenha uma excelente semana. 😀</p>
-            <button class="copy-btn" onclick="copyMessage('msg3')">Copiar</button> <!-- Botão Copiar -->
+            <button class="copy-btn" onclick="copyMessage('msg3')">Copiar</button>
         </div>
 
         <div class="mensagem" id="msg4">
             <h3>Mensagem 4: Pergunta de Ajuda</h3>
             <p>Em que posso ajudar no momento?</p>
-            <button class="copy-btn" onclick="copyMessage('msg4')">Copiar</button> <!-- Botão Copiar -->
+            <button class="copy-btn" onclick="copyMessage('msg4')">Copiar</button>
         </div>
 
         <div class="mensagem" id="msg5">
             <h3>Mensagem 5: Finalizando Atendimento</h3>
             <p>Caro cliente, o horário do meu expediente chegou ao fim! Portanto, eu irei finalizar o seu atendimento, mas sempre que precisar, estamos à disposição para atendê-lo. Tenha uma excelente semana! 😀</p>
-            <button class="copy-btn" onclick="copyMessage('msg5')">Copiar</button> <!-- Botão Copiar -->
+            <button class="copy-btn" onclick="copyMessage('msg5')">Copiar</button>
         </div>
 
         <div class="mensagem" id="msg6">
             <h3>Mensagem 6: Solicitação de Vídeo</h3>
             <p>Certo! Você poderia me enviar, por gentileza, um pequeno vídeo do seu roteador no momento? Assim, podemos verificar melhor o seu caso!</p>
-            <button class="copy-btn" onclick="copyMessage('msg6')">Copiar</button> <!-- Botão Copiar -->
+            <button class="copy-btn" onclick="copyMessage('msg6')">Copiar</button>
         </div>
 
         <div class="mensagem" id="msg7">
             <h3>Mensagem 7: Motivo do Cancelamento</h3>
             <p>Qual seria o motivo do cancelamento? Não gostaríamos de perder você como cliente! 😕</p>
-            <button class="copy-btn" onclick="copyMessage('msg7')">Copiar</button> <!-- Botão Copiar -->
+            <button class="copy-btn" onclick="copyMessage('msg7')">Copiar</button>
         </div>
 
         <div class="mensagem" id="msg8">
             <h3>Mensagem 8: Motivo de Insatisfação</h3>
             <p>Entendido! Gostaria de saber se o motivo do cancelamento está relacionado a alguma insatisfação com nossos serviços, para que eu possa te ajudar da melhor forma possível.</p>
-            <button class="copy-btn" onclick="copyMessage('msg8')">Copiar</button> <!-- Botão Copiar -->
+            <button class="copy-btn" onclick="copyMessage('msg8')">Copiar</button>
         </div>
 
         <div class="mensagem" id="msg9">
             <h3>Mensagem 9: Transferência para Almoço</h3>
             <p>Caro cliente, estarei saindo para meu horário de almoço, portanto, eu irei te transferir para que outro atendente dê continuidade em seu atendimento. Foi um prazer te atender. 😀</p>
-            <button class="copy-btn" onclick="copyMessage('msg9')">Copiar</button> <!-- Botão Copiar -->
+            <button class="copy-btn" onclick="copyMessage('msg9')">Copiar</button>
         </div>
 
         <div class="mensagem" id="msg10">
             <h3>Mensagem 10: Indisponibilidade na Região</h3>
             <p>Verifiquei que existe uma indisponibilidade em sua região, mas não se preocupe, a nossa equipe já está no local realizando os devidos procedimentos para que a sua conexão volte o mais rápido possível. No momento eu te ajudo em algo mais?</p>
-            <button class="copy-btn" onclick="copyMessage('msg10')">Copiar</button> <!-- Botão Copiar -->
+            <button class="copy-btn" onclick="copyMessage('msg10')">Copiar</button>
         </div>
 
         <div class="mensagem" id="msg11">
             <h3>Mensagem 11: Apresentação e Atendimento</h3>
             <p>Olá! Fico muito feliz em poder te atender 😀 Faço parte do time de relacionamento da Msol! Meu nome é xxxx e irei dar continuidade ao seu atendimento. O que posso fazer por você hoje?</p>
-            <button class="copy-btn" onclick="copyMessage('msg11')">Copiar</button> <!-- Botão Copiar -->
+            <button class="copy-btn" onclick="copyMessage('msg11')">Copiar</button>
         </div>
 
         <div class="mensagem" id="msg12">
             <h3>Mensagem 12: Oferta Paramount+</h3>
             <p>Paramount+ 🎬 O Paramount+ é uma plataforma de streaming que oferece filmes, séries, desenhos e conteúdos exclusivos da Paramount. Nele, você encontra produções originais, lançamentos de Hollywood e títulos de sucesso, além de canais ao vivo. O serviço está disponível para assistir pelo celular, computador e smart TVs, permitindo download de conteúdos para assistir offline em alguns planos.</p>
-            <button class="copy-btn" onclick="copyMessage('msg12')">Copiar</button> <!-- Botão Copiar -->
+            <button class="copy-btn" onclick="copyMessage('msg12')">Copiar</button>
         </div>
 
         <div class="mensagem" id="msg13">
             <h3>Mensagem 13: Oferta Deezer</h3>
             <p>Deezer 🎵 O Deezer é um serviço de streaming de música que permite ouvir milhões de músicas, criar playlists, baixar faixas para ouvir offline e acessar conteúdos exclusivos. Com planos individuais, familiares e até gratuitos com anúncios, o usuário pode curtir suas músicas favoritas em diversos dispositivos, como celular, computador e smart TVs.</p>
-            <button class="copy-btn" onclick="copyMessage('msg13')">Copiar</button> <!-- Botão Copiar -->
+            <button class="copy-btn" onclick="copyMessage('msg13')">Copiar</button>
         </div>
 
     </div>
