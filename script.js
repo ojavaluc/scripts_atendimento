@@ -1,9 +1,18 @@
+// Função para rolar até a seção de regras de atendimento
+function scrollToRegras() {
+    document.getElementById("regras").scrollIntoView({ behavior: 'smooth', block: 'end' });
+}
+
+// Função para rolar até o topo da página
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 // Função para abrir/fechar o menu lateral
 function toggleMenu() {
     var menu = document.getElementById("menu");
     var container = document.querySelector(".container");
 
-    // Verificar se o menu está aberto ou fechado
     if (menu.style.width === "250px") {
         menu.style.width = "0";
         container.style.marginLeft = "0";
@@ -32,10 +41,13 @@ document.querySelectorAll('#menu a').forEach(anchor => {
 
         // Destacar a mensagem correspondente
         var target = document.querySelector(this.getAttribute('href'));
-        target.classList.add('highlight');
+        
+        if (target) { // Verificar se o target existe
+            target.classList.add('highlight');
 
-        // Rolar até a mensagem
-        target.scrollIntoView({ behavior: 'smooth' });
+            // Rolar até a mensagem
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });
 
@@ -45,15 +57,13 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
         // Encontrar o texto da mensagem correspondente
         var messageText = this.closest('.mensagem').querySelector('p').textContent;
 
-        // Criar um elemento de input para copiar o texto
-        var tempInput = document.createElement('input');
-        tempInput.value = messageText;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempInput);
-
-        // Aviso de sucesso ao copiar
-        alert('Mensagem copiada!');
-    });
+        // Usar a API Clipboard para copiar o texto
+        navigator.clipboard.writeText(messageText).then(() => {
+            // Alerta de sucesso ao copiar
+            alert('Mensagem copiada!');
+        }).catch(err => {
+            // Caso ocorra um erro, exibe uma mensagem de erro
+            alert('Falha ao copiar mensagem: ' + err);
+        });
+    }); 
 });
