@@ -1,0 +1,78 @@
+<!-- Salve como pagina2.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens Adicionais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>SCRIPTS HUBSOFT</h1>
+        <button id="menuToggle" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <nav id="menu" class="sidebar">
+        <button id="closeMenu" onclick="toggleMenu()">X</button>
+        <ul>
+            <li><a href="index.html">Voltar para Página Principal</a></li>
+            <li><a href="#msgA1">Mudança de Endereço</a></li>
+            <li><a href="#msgA2">Ponto Parado Indisponibilidade</a></li>
+            <li><a href="#msgA3">Retenção Cancelamento</a></li>
+        </ul>
+    </nav>
+
+         <div class="container">
+        <!-- Área de mensagens em colunas -->
+        <div class="mensagens-em-colunas">
+        <div class="mensagem" id="msgA1">
+        <h3>Mudança de Endereço</h3>
+        <p>Titular entra em contato e solicita mudança de endereço.
+            Dados cadastrais confirmados com sucesso.
+            Telefone de contato:
+            Antigo endereço: 
+            Novo endereço: 
+            Número: 
+            Bairro: 
+            Ponto de referência: 
+            Cep: 
+            Cidade: 
+            Protocolo:</p>
+        <button class="copy-btn" onclick="copyMessage('msgA1')">Copiar</button>
+        </div>
+
+
+        <div class="mensagem" id="msgA2">
+        <h3>Ponto Parado Indisponibilidade</h3>
+        <p>Local com indisponibilidade devido ao ponto estar parado, 
+            foi informado ao cliente que estamos realizando os devidos procedimentos para que a conexão volte o mais rápido possível.
+            Protocolo:</p>
+        <button class="copy-btn" onclick="copyMessage('msgA2')">Copiar</button>
+        </div>
+
+
+        <div class="mensagem" id="msgA3">
+        <h3>Retenção Cancelamento</h3>
+        <p>•    Cancelamento de contrato
+
+            Titular XXX entrou em contato solicitando o encerramento do seu contrato devido a XXXXXXXXXXXX
+            Dados cadastrais confirmados com sucesso.
+            
+            Foi ofertado como forma de retenção as seguintes propostas:
+            1.
+            2.
+            3.
+            Telefone para contato: 
+            Endereço de Instalação:
+            Protocolo:</p>
+        <button class="copy-btn" onclick="copyMessage('msgA3')">Copiar</button>
+        </div>
+        </div>
+        </div>
+
+    <button id="scrollToTop" onclick="scrollToTop()">Voltar ao Topo</button>
+    <script src="script.js"></script>
+</body>
+</html>
