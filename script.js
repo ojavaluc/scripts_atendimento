@@ -1,6 +1,9 @@
 // Função para rolar até a seção de regras de atendimento
 function scrollToRegras() {
-    document.getElementById("regras").scrollIntoView({ behavior: 'smooth', block: 'end' });
+    const regras = document.getElementById("regras");
+    if (regras) {
+        regras.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }
 }
 
 // Função para rolar até o topo da página
@@ -31,39 +34,35 @@ function closeMenu() {
     container.style.marginLeft = "0";
 }
 
-// Função para destacar a mensagem selecionada ao clicar no menu
+// Destacar a mensagem ao clicar no link do menu
 document.querySelectorAll('#menu a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
 
-        // Remover o destaque de todas as mensagens
-        document.querySelectorAll('.mensagem').forEach(msg => msg.classList.remove('highlight'));
+            // Remove destaque anterior
+            document.querySelectorAll('.mensagem').forEach(msg => msg.classList.remove('highlight'));
 
-        // Destacar a mensagem correspondente
-        var target = document.querySelector(this.getAttribute('href'));
-        
-        if (target) { // Verificar se o target existe
-            target.classList.add('highlight');
-
-            // Rolar até a mensagem
-            target.scrollIntoView({ behavior: 'smooth' });
+            // Destaca a nova mensagem
+            const target = document.querySelector(href);
+            if (target) {
+                target.classList.add('highlight');
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     });
 });
 
-// Função para copiar o conteúdo da mensagem ao clicar no botão "Copiar"
+// Copiar o conteúdo da mensagem
 document.querySelectorAll('.copy-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        // Encontrar o texto da mensagem correspondente
-        var messageText = this.closest('.mensagem').querySelector('p').textContent;
+    btn.addEventListener('click', function () {
+        const messageText = this.closest('.mensagem').querySelector('p').textContent;
 
-        // Usar a API Clipboard para copiar o texto
         navigator.clipboard.writeText(messageText).then(() => {
-            // Alerta de sucesso ao copiar
             alert('Mensagem copiada!');
         }).catch(err => {
-            // Caso ocorra um erro, exibe uma mensagem de erro
             alert('Falha ao copiar mensagem: ' + err);
         });
-    }); 
+    });
 });
