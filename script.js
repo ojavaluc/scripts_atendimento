@@ -66,3 +66,48 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
         });
     });
 });
+function verificarRespostas() {
+    let pontuacao = 0;
+    
+    // Respostas corretas
+    const respostasCorretas = {
+        q1: "D",
+        q2: "C",
+        q3: "D",
+        q4: "B",
+        q5: "E"
+    };
+
+    // Verificar respostas
+    for (let pergunta in respostasCorretas) {
+        let respostaSelecionada = document.querySelector(`input[name="${pergunta}"]:checked`);
+        if (respostaSelecionada && respostaSelecionada.value === respostasCorretas[pergunta]) {
+            pontuacao++;
+        }
+    }
+
+    document.getElementById("resultadoQuiz").textContent = `Você acertou ${pontuacao} de 5 perguntas!`;
+}
+// Função para rolar ao topo suavemente
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Mostrar o botão apenas quando o usuário rolar para baixo
+window.addEventListener("scroll", function() {
+    let scrollButton = document.getElementById("scrollToTop");
+    
+    if (window.scrollY > 300) { // Se rolou mais de 300px
+        scrollButton.style.display = "block";
+    } else {
+        scrollButton.style.display = "none";
+    }
+});
+
+
+function scrollToQuiz() {
+    const quizSection = document.getElementById("quiz");
+    if (quizSection) {
+        quizSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
