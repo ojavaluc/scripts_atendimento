@@ -18,10 +18,17 @@
     <a href="pagina2.html">
         <button>Ir para Scripts Hubsoft</button>
     </a>
+    <button onclick="scrollToQuiz()">Quizz</button>
+    <a href="pagina3.html">
+        <button>Treinamento Interno</button>
+      </a>
+      
     <button id="scrollToRegras" onclick="scrollToRegras()">Regras de Atendimento</button>
     <!-- Menu Lateral (Sidebar) -->
     <nav id="menu" class="sidebar">
         <button id="closeMenu" onclick="toggleMenu()">X</button> <!-- Botão de fechar dentro do menu -->
+
+
         <ul>
             <li><a href="#msg1">Saudação Inicial</a></li>
             <li><a href="#msg2">Oferecimento de Ajuda</a></li>
@@ -139,6 +146,62 @@
 
     <!-- Inclusão do arquivo JavaScript externo -->
     <script src="script.js"></script>
+    <div class="quiz-container">
 
+        <section id="quiz">
+            <!-- conteúdo do quiz aqui -->
+        </section>
+        
+        <h3>Teste seus conhecimentos sobre conexão e Wi-Fi!</h3>
+    
+        <div class="quiz-question">
+            <p>1. Para quem joga online, qual opção oferece a melhor estabilidade e menor latência?</p>
+            <input type="radio" name="q1" value="A"> Aproximar o roteador do dispositivo<br>
+            <input type="radio" name="q1" value="B"> Utilizar Wi-Fi na frequência 5 GHz<br>
+            <input type="radio" name="q1" value="C"> Fechar aplicativos de fundo<br>
+            <input type="radio" name="q1" value="D"> Conectar via cabo de rede (Ethernet)<br>
+            <input type="radio" name="q1" value="E"> Reiniciar o roteador antes de jogar<br>
+        </div>
+    
+        <div class="quiz-question">
+            <p>2. Qual frequência tem maior alcance, mas menor velocidade no Wi-Fi?</p>
+            <input type="radio" name="q2" value="A"> 60 GHz<br>
+            <input type="radio" name="q2" value="B"> 24 GHz<br>
+            <input type="radio" name="q2" value="C"> 2.4 GHz<br>
+            <input type="radio" name="q2" value="D"> 5 GHz<br>
+            <input type="radio" name="q2" value="E"> 6 GHz<br>
+        </div>
+    
+        <div class="quiz-question">
+            <p>3. Qual desses objetos pode refletir o sinal Wi-Fi e causar zonas de sombra?</p>
+            <input type="radio" name="q3" value="A"> Plantas naturais<br>
+            <input type="radio" name="q3" value="B"> Luminárias de LED<br>
+            <input type="radio" name="q3" value="C"> Tecido grosso<br>
+            <input type="radio" name="q3" value="D"> Espelhos<br>
+            <input type="radio" name="q3" value="E"> Papel de parede<br>
+        </div>
+    
+        <div class="quiz-question">
+            <p>4. Por que o sinal de Wi-Fi pode ficar mais fraco em cômodos distantes do roteador?</p>
+            <input type="radio" name="q4" value="A"> O sinal só funciona em linha reta<br>
+            <input type="radio" name="q4" value="B"> Obstáculos físicos enfraquecem a propagação<br>
+            <input type="radio" name="q4" value="C"> O roteador desativa o sinal à distância<br>
+            <input type="radio" name="q4" value="D"> A frequência do Wi-Fi varia automaticamente<br>
+            <input type="radio" name="q4" value="E"> O sinal não funciona em lugares fechados<br>
+        </div>
+    
+        <div class="quiz-question">
+            <p>5. Qual dos itens abaixo mais contribui para a atenuação do sinal Wi-Fi dentro de uma casa?</p>
+            <input type="radio" name="q5" value="A"> Porta de madeira<br>
+            <input type="radio" name="q5" value="B"> Piso de cerâmica<br>
+            <input type="radio" name="q5" value="C"> Vidro temperado<br>
+            <input type="radio" name="q5" value="D"> Espelhos decorativos<br>
+            <input type="radio" name="q5" value="E"> Paredes de concreto armado<br>
+        </div>
+    
+        <button onclick="verificarRespostas()">Verificar respostas</button>
+        <p id="resultadoQuiz"></p>
+    </div>
+    <button id="scrollToTop" onclick="scrollToTop()">Voltar ao Topo</button>
 </body>
 </html>
